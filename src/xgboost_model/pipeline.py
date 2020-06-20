@@ -3,20 +3,9 @@ import xgboost as xgb
 
 from xgboost_model import preprocessing as pp
 from xgboost_model import features
-from xgboost_model import config
-
-# df = load_dataset(file_name=config.TRAINING_DATA_FILE)
-#     df = drop_nas(df)
-#     df = create_type_var(df)
-#     df = create_additional_vars(df)
-#     df = rename_cols(df)
-#     df = label_encoding(df)
 
 price_pipe = Pipeline(
     [
-        # (
-        #     "drop_nas", pp.DropNas(),
-        # ),
         (
             "create_type_var", features.CreateTypeVar(),
         ),
