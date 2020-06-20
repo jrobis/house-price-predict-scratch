@@ -22,15 +22,14 @@ KEEP_FEATURES = ['postal_code', 'provider', 'type', 'bed_count', 'bath_count', '
 
 categorical_vars = ['provider', 'type', 'postal_code']
 
-sample_data = {
-    "postal_code": 0
-    ,"price": 500000
-    ,"provider": 12
-    ,"type": 4
-    ,"bed_count": 4.0
-    ,"bath_count": 2.5
-    ,"sqft": 3500.0
+sample_data={
+    'title': 'Apartment for sale'
+    ,'address': None
+    ,'city': 'Denver'
+    ,'state': 'CO'
+    ,'postal_code': '80210'
+    ,'price': "$875,000"
+    ,'facts and features': '3 bds, 4.0 ba ,2821 sqft'
+    ,'real estate provider': 'Re/max Alliance'
+    ,'url': 'https://www.zillow.com/homedetails/2005-S-Washington-St-Denver-CO-80210/13378053_zpid/'
 }
-
-
-

@@ -4,18 +4,14 @@ import joblib
 from xgboost_model import config
 from xgboost_model import __version__ as _version
 
+
 def load_dataset(file_name):
     df = pd.read_csv(f"{config.DATASET_DIR}/{file_name}")
     return df
 
 
-# def save_model(model, version):
-#     save_file_name = f"{config.MODEL_NAME}{version}.pkl"
-#     save_path = config.TRAINED_MODEL_DIR / save_file_name
-#     joblib.dump(model, save_path)
-
 def save_pipeline(pipeline):
-    save_file_name = f"{config.MODEL_NAME}{_version}.pkl"
+    save_file_name = f"{config.PIPELINE_SAVE_FILE}{_version}.pkl"
     save_path = config.TRAINED_MODEL_DIR / save_file_name
 
     remove_old_pipelines(files_to_keep=save_file_name)
