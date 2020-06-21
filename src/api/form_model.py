@@ -16,9 +16,6 @@ class InputForm(Form):
     postal_code = StringField(
         label='time interval (s)', default=None,
         validators=[validators.InputRequired()])
-    # price = FloatField(
-    #     label='time interval (s)', default=18,
-    #     validators=[validators.InputRequired()])
     facts_and_features = StringField(
         label='time interval (s)', default=None,
         validators=[validators.InputRequired()])
