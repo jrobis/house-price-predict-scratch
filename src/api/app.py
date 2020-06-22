@@ -3,6 +3,8 @@ from flask import Flask
 def create_app(*, config_object) -> Flask:
     """Create a flask app instance."""
 
+    print('here')
+
     flask_app = Flask('api')
     flask_app.config.from_object(config_object)
 
