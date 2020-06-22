@@ -1,8 +1,8 @@
 FROM python:3.8.3
 
-WORKDIR /house_price_predict_scratch/src/
+# WORKDIR /house_price_predict_scratch/src/
 
-RUN adduser --disabled-password --gecos '' api-user
+# RUN adduser --disabled-password --gecos '' api-user
 
 # ENV FLASK_RUN_HOST 0.0.0.0
 
@@ -15,6 +15,9 @@ COPY ./src/api/run.py run.py
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+# RUN chown -R api-user:api-user ./
+
+EXPOSE 80
 EXPOSE 5000
 
-CMD [ "python", "run.py" ]
+ENTRYPOINT [ "python", "run.py" ]
