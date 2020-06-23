@@ -1,4 +1,4 @@
-from xgboost_model import config
+from xgboost_model.config import config
 
 from sklearn.base import BaseEstimator, TransformerMixin
 
