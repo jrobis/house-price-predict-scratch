@@ -8,6 +8,8 @@ set -e
 
 DIRS="$@"
 BASE_DIR=$(pwd)
+echo "pwd is"
+echo BASE_DIR
 SETUP="setup.py"
 
 warn() {
