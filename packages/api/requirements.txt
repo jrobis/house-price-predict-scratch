@@ -25,5 +25,8 @@ Werkzeug==1.0.1
 WTForms==2.3.1
 xgboost==1.1.1
 
-
 xgboost-model==0.1.0
+
+# packaging
+setuptools>=41.4.0,<42.0.0
+wheel>=0.33.6,<0.34.0
