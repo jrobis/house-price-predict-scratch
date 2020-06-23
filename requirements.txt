@@ -1,3 +1,4 @@
+--extra-index-url=${PIP_EXTRA_INDEX_URL}
 click==7.1.2
 Flask==1.1.2
 itsdangerous==1.1.0
@@ -16,3 +17,6 @@ threadpoolctl==2.1.0
 Werkzeug==1.0.1
 WTForms==2.3.1
 xgboost==1.1.1
+
+# Install from gemfury
+xgboost_model==0.1.0

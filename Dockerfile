@@ -17,7 +17,6 @@ RUN pip install -r requirements.txt
 
 # RUN chown -R api-user:api-user ./
 
-EXPOSE 80
 EXPOSE 5000
 
 ENTRYPOINT [ "python", "run.py" ]
