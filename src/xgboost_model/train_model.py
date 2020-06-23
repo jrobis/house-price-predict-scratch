@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 
-from xgboost_model import config
+from xgboost-model import config
 from xgboost_model.data_management import load_dataset, save_pipeline
 from xgboost_model.preprocessing import DropNas
 from xgboost_model import pipeline
