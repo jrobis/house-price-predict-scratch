@@ -1,0 +1,6 @@
+README.md
+setup.py
+xgboost_model_pkg_jarsushi.egg-info/PKG-INFO
+xgboost_model_pkg_jarsushi.egg-info/SOURCES.txt
+xgboost_model_pkg_jarsushi.egg-info/dependency_links.txt
+xgboost_model_pkg_jarsushi.egg-info/top_level.txt
