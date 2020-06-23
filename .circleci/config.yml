@@ -1,0 +1,45 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/python:3.8.3
+  working_directory: ~/project
+
+
+prepare_venv: &prepare_venv
+  run:
+    name: Create venv
+    command: |
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install --upgrade pip
+
+jobs:
+  train_and_upload_xgboost_model:
+    <<: *defaults
+    steps:
+      - checkout
+      - *prepare_venv
+      - run:
+          name: Install requirements
+          command: |
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - run:
+          name: Train model
+          command: |
+            . venv/bin/activate
+            PYTHONPATH=./src/xgboost_model python3 src/xgboost_model/train_model.py
+      - run:
+          name: Publish model to Gemfury
+          command: |
+            . venv/bin/activate
+            chmod +x ./scripts/publish_model.sh
+            ./scripts/publish_model.sh ./src/xgboost_model/
+
+workflows:
+  version: 2
+  test-all:
+    jobs:
+      - train_and_upload_xgboost_model
+

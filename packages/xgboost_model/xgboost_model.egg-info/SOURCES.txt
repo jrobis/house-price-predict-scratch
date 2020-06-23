@@ -1,0 +1,6 @@
+README.md
+setup.py
+xgboost_model.egg-info/PKG-INFO
+xgboost_model.egg-info/SOURCES.txt
+xgboost_model.egg-info/dependency_links.txt
+xgboost_model.egg-info/top_level.txt

@@ -1,8 +1,8 @@
 from sklearn.pipeline import Pipeline
 import xgboost as xgb
 
-from xgboost_model import preprocessing as pp
-from xgboost_model import features
+from xgboost_model.processing import preprocessing as pp
+from xgboost_model.processing import features
 
 price_pipe = Pipeline(
     [

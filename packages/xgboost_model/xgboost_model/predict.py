@@ -1,7 +1,7 @@
 import pandas as pd
 
-from xgboost_model import config
-from xgboost_model.data_management import load_pipeline
+from xgboost_model.config import config
+from xgboost_model.processing.data_management import load_pipeline
 from xgboost_model import __version__ as _version
 
 import logging

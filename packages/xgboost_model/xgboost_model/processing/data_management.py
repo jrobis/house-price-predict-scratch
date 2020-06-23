@@ -1,7 +1,7 @@
 import pandas as pd
 import joblib
 
-from xgboost_model import config
+from xgboost_model.config import config
 from xgboost_model import __version__ as _version
 
 

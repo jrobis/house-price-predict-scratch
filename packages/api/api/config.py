@@ -1,8 +1,6 @@
 import pathlib
 
-import api
-
-PACKAGE_ROOT = pathlib.Path(api.__file__).resolve().parent
+PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
 class Config:

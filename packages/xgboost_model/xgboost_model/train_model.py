@@ -1,8 +1,8 @@
 from sklearn.model_selection import train_test_split
 
-from xgboost_model import config
-from xgboost_model.data_management import load_dataset, save_pipeline
-from xgboost_model.preprocessing import DropNas
+from xgboost_model.config import config
+from xgboost_model.processing.data_management import load_dataset, save_pipeline
+from xgboost_model.processing.preprocessing import DropNas
 from xgboost_model import pipeline
 
 
@@ -23,4 +23,3 @@ def run_training():
 
 if __name__ == "__main__":
     model = run_training()
-
