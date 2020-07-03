@@ -1,3 +1,4 @@
+import xgboost_model
 from xgboost_model.config import config
 
 VERSION_PATH = config.PACKAGE_ROOT / 'VERSION'
