@@ -1,6 +1,8 @@
-from api import config
+from api.config import PACKAGE_ROOT
 
-VERSION_PATH = config.PACKAGE_ROOT / 'VERSION'
+VERSION_PATH = PACKAGE_ROOT / 'VERSION'
+print("HERE")
+print(VERSION_PATH)
 
 with open(VERSION_PATH, 'r') as version_file:
     __version__ = version_file.read().strip()

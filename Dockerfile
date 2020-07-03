@@ -8,18 +8,22 @@ FROM python:3.8.3
 
 ARG PIP_EXTRA_INDEX_URL
 
-COPY ./packages/api/ api
-COPY ./packages/xgboost_model/ xgboost_model
+WORKDIR /opt/api
+
+COPY ./packages/api /opt/api/
+# COPY ./packages/xgboost_model /opt/xgboost_model/
+# COPY ./packages/api/ api
+# COPY ./packages/xgboost_model/ xgboost_model
 
 # COPY ./packages/xgboost requirements.txt requirements.txt
 # COPY ./src/api/run.py run.py
 
 RUN pip install --upgrade pip
 # RUN pip install -r xgboost_model/requirements.txt
-RUN pip install -r api/requirements.txt
+RUN pip install -r /opt/api/requirements.txt
 
 # RUN chown -R api-user:api-user ./
 
 EXPOSE 5000
 
-ENTRYPOINT [ "python", "api/run.py" ]
+ENTRYPOINT [ "python", "/opt/api/run.py" ]
