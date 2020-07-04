@@ -10,7 +10,8 @@ ARG PIP_EXTRA_INDEX_URL
 
 WORKDIR /opt/api
 
-COPY ./packages/api /opt/api/
+ADD ./packages/api /opt/api/
+# ADD ./packages/xgboost_model /opt/xgboost_model/
 # COPY ./packages/xgboost_model /opt/xgboost_model/
 # COPY ./packages/api/ api
 # COPY ./packages/xgboost_model/ xgboost_model

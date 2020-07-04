@@ -2,7 +2,7 @@ import pathlib
 
 import xgboost_model
 
-PACKAGE_ROOT = pathlib.Path(xgboost_model.__file__).resolve().parent
+PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATASET_DIR = PACKAGE_ROOT / "datasets"
 TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
 TRAINING_DATA_FILE = "properties-80210.csv"
