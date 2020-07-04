@@ -9,6 +9,8 @@ include xgboost_model/datasets/test.csv
 include xgboost_model/trained_models/*.pkl
 include xgboost_model/VERSION
 
+include ./VERSION
+
 include ./requirements.txt
 exclude *.log
 
