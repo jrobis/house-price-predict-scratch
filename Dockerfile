@@ -11,17 +11,17 @@ ARG PIP_EXTRA_INDEX_URL
 
 WORKDIR /opt/api
 
-ADD ./packages/api /opt/api/
+# ADD ./packages/api /opt/api/
 # ADD ./packages/xgboost_model /opt/xgboost_model/
-# COPY ./packages/xgboost_model /opt/xgboost_model/
-# COPY ./packages/api/ api
+COPY ./packages/xgboost_model /opt/xgboost_model/
+COPY ./packages/api/ /opt/api/
 # COPY ./packages/xgboost_model/ xgboost_model
 
 # COPY ./packages/xgboost requirements.txt requirements.txt
 # COPY ./src/api/run.py run.py
 
 RUN pip install --upgrade pip
-# RUN pip install -r xgboost_model/requirements.txt
+RUN pip install -r /opt/xgboost_model/requirements.txt
 RUN pip install -r /opt/api/requirements.txt
 
 # RUN chown -R api-user:api-user ./

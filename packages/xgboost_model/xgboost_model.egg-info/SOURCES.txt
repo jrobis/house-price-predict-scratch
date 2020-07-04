@@ -11,6 +11,7 @@ xgboost_model/train_model.py
 xgboost_model.egg-info/PKG-INFO
 xgboost_model.egg-info/SOURCES.txt
 xgboost_model.egg-info/dependency_links.txt
+xgboost_model.egg-info/requires.txt
 xgboost_model.egg-info/top_level.txt
 xgboost_model/config/__init__.py
 xgboost_model/config/config.py
