@@ -8,6 +8,7 @@ FROM python:3.8.3
 
 ARG PIP_EXTRA_INDEX_URL
 
+
 WORKDIR /opt/api
 
 ADD ./packages/api /opt/api/
