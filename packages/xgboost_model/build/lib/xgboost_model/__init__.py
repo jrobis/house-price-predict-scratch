@@ -1,6 +1,6 @@
-from api.config import PACKAGE_ROOT
+from xgboost_model.config import config
 
-VERSION_PATH = PACKAGE_ROOT / 'VERSION'
+VERSION_PATH = config.PACKAGE_ROOT / 'VERSION'
 
 with open(VERSION_PATH, 'r') as version_file:
     __version__ = version_file.read().strip()
