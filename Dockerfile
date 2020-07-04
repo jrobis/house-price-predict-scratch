@@ -6,17 +6,26 @@ FROM python:3.8.3
 
 # ENV FLASK_RUN_HOST 0.0.0.0
 
-ADD ./src/api/ api
-ADD ./src/xgboost_model xgboost_model
+ARG PIP_EXTRA_INDEX_URL
 
-COPY requirements.txt requirements.txt
-COPY ./src/api/run.py run.py
+
+WORKDIR /opt/api
+
+# ADD ./packages/api /opt/api/
+# ADD ./packages/xgboost_model /opt/xgboost_model/
+COPY ./packages/xgboost_model /opt/xgboost_model/
+COPY ./packages/api/ /opt/api/
+# COPY ./packages/xgboost_model/ xgboost_model
+
+# COPY ./packages/xgboost requirements.txt requirements.txt
+# COPY ./src/api/run.py run.py
 
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r /opt/xgboost_model/requirements.txt
+RUN pip install -r /opt/api/requirements.txt
 
 # RUN chown -R api-user:api-user ./
 
 EXPOSE 5000
 
-ENTRYPOINT [ "python", "run.py" ]
+ENTRYPOINT [ "python", "/opt/api/run.py" ]
