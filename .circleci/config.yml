@@ -41,5 +41,5 @@ workflows:
   version: 2
   test-all:
     jobs:
-      - train_and_upload_xgboost_model
+      - train_xgboost_model
 
