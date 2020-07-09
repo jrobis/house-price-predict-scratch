@@ -15,7 +15,7 @@ prepare_venv: &prepare_venv
       pip install --upgrade pip
 
 jobs:
-  train_and_upload_xgboost_model:
+  train_xgboost_model:
     <<: *defaults
     steps:
       - checkout
@@ -30,12 +30,12 @@ jobs:
           command: |
             . venv/bin/activate
             PYTHONPATH=./packages/xgboost_model python3 packages/xgboost_model/xgboost_model/train_model.py
-      - run:
-          name: Publish model to Gemfury
-          command: |
-            . venv/bin/activate
-            chmod +x ./scripts/publish_model.sh
-            ./scripts/publish_model.sh ./packages/xgboost_model/
+#      - run:
+#          name: Publish model to Gemfury
+#          command: |
+#            . venv/bin/activate
+#            chmod +x ./scripts/publish_model.sh
+#            ./scripts/publish_model.sh ./packages/xgboost_model/
 
 workflows:
   version: 2
