@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: xgboost-model
-Version: 0.1.0
+Version: 0.1.2
 Summary: A small xgboost model package
 Home-page: https://github.com/jarsushi/house-price-predict-scratch/tree/master/src/xgboost_model
 Author: Joshua Robison
