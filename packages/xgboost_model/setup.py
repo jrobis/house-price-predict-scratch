@@ -22,7 +22,6 @@ def list_reqs(fname='requirements.txt'):
         return fd.read().splitlines()
 
 setuptools.setup(
-    # name="xgboost-model-pkg-jarsushi", # Replace with your own username
     name=NAME,
     version=about['__version__'],
     author="Joshua Robison",
