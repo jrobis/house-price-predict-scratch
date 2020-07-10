@@ -15,7 +15,6 @@ setup.py
 ./xgboost_model/processing/data_management.py
 ./xgboost_model/processing/features.py
 ./xgboost_model/processing/preprocessing.py
-./xgboost_model/trained_models/xgboost_v0.1.0.pkl
 xgboost_model/.DS_Store
 xgboost_model/VERSION
 xgboost_model/__init__.py
@@ -33,4 +32,4 @@ xgboost_model/datasets/properties-80210.csv
 xgboost_model/processing/data_management.py
 xgboost_model/processing/features.py
 xgboost_model/processing/preprocessing.py
-xgboost_model/trained_models/xgboost_v0.1.0.pkl
+xgboost_model/trained_models/xgboost_v0.1.2.pkl
